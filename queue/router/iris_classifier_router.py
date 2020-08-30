@@ -1,9 +1,8 @@
 from fastapi import APIRouter
-from iris.iris_classifier import IrisClassifier
+from queue.iris_classifier import IrisClassifier
 from starlette.responses import JSONResponse
 
 router = APIRouter()
-
 
 @router.post('/classify_iris')
 def extract_name(iris_features: dict):
