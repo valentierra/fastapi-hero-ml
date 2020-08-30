@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from queue.router import iris_classifier_router
 
 app = FastAPI()
-app.include_router(iris_classifier_router.router, prefix='/iris')
+app.include_router(iris_classifier_router.router, prefix='/queue')
 
 
 @app.get('/healthcheck', status_code=200)
